@@ -14,6 +14,9 @@ function onSubmit(evt) {
     .catch(onRejected);
 }
 
+const delay = parseInt(userDelay.value, 10); 
+  const state = userState.value;
+
 function createPromise(delay, status) {
   const promise = new Promise((res, rej) => {
     if (status === 'fulfilled') setTimeout(() => res(delay), delay);
